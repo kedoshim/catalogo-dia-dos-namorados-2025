@@ -425,7 +425,8 @@ hr {
         margin-left: 20px;
         text-decoration: none;
         color: #333;
-        font-we
+        font-weight: bold;
+    }
 
     .title {
         font-size: 70px;

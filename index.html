@@ -1,43 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Catálogo Amo Você Cestas</title>
-  <link rel="icon" href="img/icons/heart.svg" type="image/x-icon" />
-  <meta property="og:image" content="img/cover.png" />
-  <link rel="stylesheet" href="styles.css" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Catálogo Amo Você Cestas</title>
+        <link rel="icon" href="img/icons/heart.svg" type="image/x-icon" />
+        <meta property="og:image" content="img/cover.png" />
+        <link rel="stylesheet" href="styles.css" />
 
-  <!-- Fontes locais -->
-  <style>
-    @font-face {
-      font-family: 'Tan Pearl';
-      src: url('fonts/tan-pearl.otf') format('opentype');
-    }
-    @font-face {
-      font-family: 'Lovelace Text';
-      src: url('fonts/lovelace-text.otf') format('opentype');
-    }
-    @font-face {
-      font-family: 'Sweetheart Birthday';
-      src: url('fonts/Sweetheart-Birthday.ttf') format('truetype');
-    }
-  </style>
+        <!-- Fontes locais -->
+        <style>
+            @font-face {
+                font-family: "Tan Pearl";
+                src: url("fonts/tan-pearl.otf") format("opentype");
+            }
+            @font-face {
+                font-family: "Lovelace Text";
+                src: url("fonts/lovelace-text.otf") format("opentype");
+            }
+            @font-face {
+                font-family: "Sweetheart Birthday";
+                src: url("fonts/Sweetheart-Birthday.ttf") format("truetype");
+            }
+        </style>
 
-  <script src="js/main.js" type="module" defer></script>
-  <script src="js/topbar.js" type="module" defer></script>
-</head>
-<body>
+        <script src="js/main.js" type="module" defer></script>
+        <script src="js/topbar.js" type="module" defer></script>
 
-<div id="topbar" class="topbar"> <img src="img/icons/logo.png" alt="Logo" class="logo" /> <nav id="navbar"></nav> </div>
+        <!-- Swiper CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
 
-<header>
-  <h1 id="main-title">Dia dos Namorados ❤</h1>
-</header>
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    </head>
+    <body>
+        <div id="topbar" class="topbar">
+            <img src="img/icons/logo.png" alt="Logo" class="logo" />
+            <nav id="navbar"></nav>
+        </div>
 
-<main id="cestas"></main>
+        <header>
+            <h1 id="main-title">Dia dos Namorados ❤</h1>
+        </header>
 
-<!-- <section id="extras">
+        <main id="cestas"></main>
+
+        <!-- <section id="extras">
   <hr>
   <h2 class="title">Adicionais:</h2>
   <div class="extras-wrapper">
@@ -51,32 +62,56 @@
   </div>
 </section> -->
 
-<section id="end">
-  <h2 class="title">Dicas</h2>
+        <section id="end">
+            <h2 class="title">Dicas</h2>
 
-  <div class="instructions">
-    <ul>
-      <li>O valor do frete será informado após consulta, com base no local de entrega.</li>
-      <li>Certifique-se de que haverá alguém no local para receber. Caso ninguém esteja presente, o pedido retornará para nosso ateliê e a entrega deverá ser combinada novamente com novo pagamento de frete.</li>
-      <li>Cada cesta é única. Podem ocorrer variações na montagem e substituições por produtos similares ou de qualidade superior, em caso de indisponibilidade.</li>
-      <li>A mensagem para o cartão e os dados para entrega devem ser enviados no ato do pedido, junto com o comprovante de pagamento.</li>
-      <li>O pedido só será confirmado após a identificação do pagamento.</li>
-    </ul>
+            <div class="instructions">
+                <ul>
+                    <li>
+                        O valor do frete será informado após consulta, com base
+                        no local de entrega.
+                    </li>
+                    <li>
+                        Certifique-se de que haverá alguém no local para
+                        receber. Caso ninguém esteja presente, o pedido
+                        retornará para nosso ateliê e a entrega deverá ser
+                        combinada novamente com novo pagamento de frete.
+                    </li>
+                    <li>
+                        Cada cesta é única. Podem ocorrer variações na montagem
+                        e substituições por produtos similares ou de qualidade
+                        superior, em caso de indisponibilidade.
+                    </li>
+                    <li>
+                        A mensagem para o cartão e os dados para entrega devem
+                        ser enviados no ato do pedido, junto com o comprovante
+                        de pagamento.
+                    </li>
+                    <li>
+                        O pedido só será confirmado após a identificação do
+                        pagamento.
+                    </li>
+                </ul>
 
-    <div class="contact">
-      <h3>Faça seu pedido:</h3>
-      <p>Instagram: @amovocecestas ou WhatsApp: (32) 99116-2238</p>
-      <a class="button" href="https://api.whatsapp.com/send?phone=5532991162238" target="_blank">
-        <span>Entre em contato!</span>
-        <img src="img/icons/whatsapp.svg" alt="WhatsApp">
-      </a>
-    </div>
-  </div>
+                <div class="contact">
+                    <h3>Faça seu pedido:</h3>
+                    <p>
+                        Instagram: @amovocecestas ou WhatsApp: (32) 99116-2238
+                    </p>
+                    <a
+                        class="button"
+                        href="https://api.whatsapp.com/send?phone=5532991162238"
+                        target="_blank"
+                    >
+                        <span>Entre em contato!</span>
+                        <img src="img/icons/whatsapp.svg" alt="WhatsApp" />
+                    </a>
+                </div>
+            </div>
 
-  <footer id="footer">
-    <p>@amovocecestas</p>
-  </footer>
-</section>
-
-</body>
+            <footer id="footer">
+                <p>@amovocecestas</p>
+            </footer>
+        </section>
+    </body>
 </html>
