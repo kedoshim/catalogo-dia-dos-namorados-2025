@@ -320,10 +320,17 @@ img {
 /* Footer */
 #footer {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
     font-family: "Tan Pearl", serif;
     font-size: 18px;
     color: #6b4226;
     padding: 20px 0;
+}
+
+.contact {
+    padding-top: 20px;
 }
 
 /* Modal de imagem */
@@ -400,10 +407,15 @@ img {
     gap: 4px;
 }
 
-/* .item-name h3.title {
-    font-size: 16px; 
-    // Reduzido //
-} */
+.white{
+    color: #fff;
+}
+
+.item-name h3.title {
+    /* font-size: 16px; */
+    color: #dd5152; 
+    /* // Reduzido // */
+}
 
 /* .item-name p.price {
     font-size: 14px;
