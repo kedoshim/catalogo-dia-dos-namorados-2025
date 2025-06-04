@@ -375,6 +375,7 @@ img {
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
+    width: 75vw;
 }
 
 .extras-container {
@@ -382,7 +383,7 @@ img {
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 10px;
-    width: 140px;
+    flex: 1;
     text-align: left;
 }
 
@@ -399,19 +400,66 @@ img {
     gap: 4px;
 }
 
-.item-name h3.title {
-    font-size: 16px; /* Reduzido */
-}
+/* .item-name h3.title {
+    font-size: 16px; 
+    // Reduzido //
+} */
 
-.item-name p.price {
+/* .item-name p.price {
     font-size: 14px;
-}
+} */
 
 /* Linha divisória */
 hr {
     width: 100%;
     border-color: #dd5152;
     margin: 20px 0;
+}
+
+/* Garantir que o container Swiper tenha altura */
+.swiper {
+    width: 100%;
+    max-width: 500px; /* ajuste conforme necessário */
+    margin: 0 auto;
+}
+
+.swiper-wrapper {
+    display: flex;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* evite imagens exageradamente altas */
+    object-fit: contain;
+}
+
+/* Paginação */
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Navegação (setas) */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #fff;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after{
+    font-size: 24px;
+}
+
+.swiper-pagination-bullet-active{
+    background-color: #dd5152;
 }
 
 /* Responsividade */
@@ -467,6 +515,20 @@ hr {
     }
 
     .extras-container {
-        max-width: 180px;
+        max-width: 500px;
     }
+
+    .swiper {
+        max-width: 1500px; 
+    }
+    
+    .slide-image {
+        max-height: 2000px;
+    }
+
+    .swiper-button-next:after, .swiper-button-prev:after{
+        font-size: 40px;
+    }
+
+
 }

@@ -42,69 +42,83 @@ export function setupProductSection(parentDiv, productData) {
     document.body.appendChild(modal);
     document.body.appendChild(overlay);
 
-    let scrollY = 0;
+    const imageCount = Object.keys(images).length;
+    const shouldLoop = imageCount > 2;
 
-    // Add event listener to main image to open modal
-    mainImage.addEventListener("click", () => {
-        fullImage.src = mainImage.src;
-        modal.style.display = "block";
-        overlay.style.display = "block";
+    // Swiper wrapper
+    const swiperContainer = document.createElement("div");
+    swiperContainer.classList.add("swiper");
 
-        scrollY = window.scrollY;
-        document.body.style.top = `-${scrollY}px`;
+    // Swiper wrapper interno
+    const swiperWrapper = document.createElement("div");
+    swiperWrapper.classList.add("swiper-wrapper");
 
-        // Compensar a falta da scrollbar
-        const scrollbarWidth =
-            window.innerWidth - document.documentElement.clientWidth;
-        document.body.style.paddingRight = `${scrollbarWidth}px`;
+    // Cria cada imagem como slide
+    Object.keys(images).forEach((key) => {
+        const slide = document.createElement("div");
+        slide.classList.add("swiper-slide");
 
-        document.body.classList.add("noscroll");
+        const img = document.createElement("img");
+        img.src = images[key];
+        img.classList.add("slide-image");
 
+        // img.addEventListener("click", () => {
+        //     fullImage.src = img.src;
+        //     modal.style.display = "block";
+        //     overlay.style.display = "block";
+
+        //     scrollY = window.scrollY;
+        //     document.body.style.top = `-${scrollY}px`;
+        //     const scrollbarWidth =
+        //         window.innerWidth - document.documentElement.clientWidth;
+        //     document.body.style.paddingRight = `${scrollbarWidth}px`;
+        //     document.body.classList.add("noscroll");
+        // });
+
+        slide.appendChild(img);
+        swiperWrapper.appendChild(slide);
     });
 
-    // Add event listener to overlay to close modal when clicked
-    overlay.addEventListener("click", () => {
-        modal.style.display = "none";
-        overlay.style.display = "none";
+    swiperContainer.appendChild(swiperWrapper);
 
-        document.body.classList.remove("noscroll");
-        document.body.style.top = "";
-        document.body.style.paddingRight = "";
-        window.scrollTo(0, scrollY);
-    });
-      
-    
+    // Paginação e botões
+    const pagination = document.createElement("div");
+    pagination.classList.add("swiper-pagination");
+    swiperContainer.appendChild(pagination);
 
-    // Create thumbnail container
-    const thumbnailContainer = document.createElement("div");
-    thumbnailContainer.id = "thumbnails";
-    thumbnailContainer.classList.add("thumbnail-container");
+    const nextBtn = document.createElement("div");
+    nextBtn.classList.add("swiper-button-next");
+    swiperContainer.appendChild(nextBtn);
 
-    let previousIndex = 1;
+    const prevBtn = document.createElement("div");
+    prevBtn.classList.add("swiper-button-prev");
+    swiperContainer.appendChild(prevBtn);
 
-    function changeMainImage(index) {
-        mainImage.src = images[index];
-        const selectedThumbnail = thumbnailContainer.querySelector(".selected");
-        if (selectedThumbnail) selectedThumbnail.classList.remove("selected");
-        thumbnailContainer.children[index - 1].classList.add("selected");
-        previousIndex = index;
-    }
+    // Adiciona o carrossel à galeria
+    imagesContainer.appendChild(swiperContainer);
 
-    // Populate thumbnails
-    if (Object.keys(images).length > 1) {
-        Object.keys(images).forEach((key, index) => {
-            const frame = document.createElement("div");
-            frame.classList.add("thumb-frame");
-            const thumb = document.createElement("img");
-            thumb.src = images[key];
-            if (index === 0) frame.classList.add("selected"); // Mark first as selected
-            frame.addEventListener("click", () => {
-                changeMainImage(index + 1);
-            });
-            frame.appendChild(thumb);
-            thumbnailContainer.appendChild(frame);
+    // Inicializa o Swiper (depois de adicionar ao DOM)
+    setTimeout(() => {
+        new Swiper(swiperContainer, {
+            loop: shouldLoop,
+            pagination: {
+                el: pagination,
+                clickable: true,
+            },
+            navigation: {
+                nextEl: nextBtn,
+                prevEl: prevBtn,
+            },
+            slidesPerView: 1,
+            spaceBetween: 10,
+            breakpoints: {
+                768: {
+                    slidesPerView: 1,
+                },
+            },
         });
-    }
+        
+    }, 0);
 
     // Create description structure
     const descriptionDiv = document.createElement("div");
@@ -162,8 +176,8 @@ export function setupProductSection(parentDiv, productData) {
 
     // Append all elements to the container
     mainFrame.appendChild(mainImage);
-    imagesContainer.appendChild(mainFrame);
-    imagesContainer.appendChild(thumbnailContainer);
+    // imagesContainer.appendChild(mainFrame);
+    imagesContainer.appendChild(swiperContainer);
     container.appendChild(imagesContainer);
     descriptionDiv.appendChild(descriptionHeader);
     if (hasDescription) descriptionDiv.appendChild(textDiv);
