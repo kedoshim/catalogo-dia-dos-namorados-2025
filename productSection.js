@@ -71,7 +71,6 @@ export function setupProductSection(parentDiv, productData) {
     }
 
     // Populate thumbnails
-    console.log("Product images:", productData.images);
     if (Object.keys(images).length > 1) {
         Object.keys(images).forEach((key, index) => {
             const frame = document.createElement("div");
