@@ -42,18 +42,38 @@ export function setupProductSection(parentDiv, productData) {
     document.body.appendChild(modal);
     document.body.appendChild(overlay);
 
+    let scrollY = 0;
+
     // Add event listener to main image to open modal
     mainImage.addEventListener("click", () => {
-        fullImage.src = mainImage.src; // Set full image source to the main image
-        modal.style.display = "block"; // Show modal
-        overlay.style.display = "block"; // Show overlay
+        fullImage.src = mainImage.src;
+        modal.style.display = "block";
+        overlay.style.display = "block";
+
+        scrollY = window.scrollY;
+        document.body.style.top = `-${scrollY}px`;
+
+        // Compensar a falta da scrollbar
+        const scrollbarWidth =
+            window.innerWidth - document.documentElement.clientWidth;
+        document.body.style.paddingRight = `${scrollbarWidth}px`;
+
+        document.body.classList.add("noscroll");
+
     });
 
     // Add event listener to overlay to close modal when clicked
     overlay.addEventListener("click", () => {
-        modal.style.display = "none"; // Hide modal
-        overlay.style.display = "none"; // Hide overlay
+        modal.style.display = "none";
+        overlay.style.display = "none";
+
+        document.body.classList.remove("noscroll");
+        document.body.style.top = "";
+        document.body.style.paddingRight = "";
+        window.scrollTo(0, scrollY);
     });
+      
+    
 
     // Create thumbnail container
     const thumbnailContainer = document.createElement("div");

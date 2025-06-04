@@ -24,6 +24,7 @@ export const products = [
         items: "Biscoitos amanteigados ( coração e chocolate) • Chocolate barra • Flor  • Urso mini • Polaroid de mesa (versão Instagram ou versão frase) • Cartão de felicitações • Embalagem em kraft",
         images: {
             1: "img/sonho/1.jpg",
+            2: "img/sonho/2.jpg",
         },
     },
     {
@@ -39,7 +40,7 @@ export const products = [
     },
     {
         title: "Simples amor",
-        price: "1749,90",
+        price: "179,90",
         description: "",
         items: "Caixa MDF reutilizável 30x20 • Café-Drip Coffee • Chocolate • Cappuccino em pó • Queijo processado Polenguinho • Brownie recheado • Nutella • Suco integral de uva ou laranja • Uvas e Morangos • Pão mini baguete com parmesão • Biscoito folhado Palmier • Biscoitos amanteigados caseiros • Mini folhados recheados",
         images: {
@@ -47,7 +48,7 @@ export const products = [
         },
     },
     {
-        title: "Amo Estar com vc",
+        title: "Amo Estar com Vc",
         price: "179,90",
         description: "",
         items: "Cesta MDF reutilizável 30x20 • Cappuccino Pronto • Biscoitos amanteigados caseiros • Bolo de cenoura com ganache • Mel • Queijo processado Polenguinho • Bombons • Frutas da estação no coco • Granola • Torrada tradicional • 2 Iogurte de frutas • Croissants recheados • Vaso de Flor",
