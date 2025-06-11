@@ -12,7 +12,7 @@ export const products = [
         title: "Cesta Eternizar",
         price: "129,90",
         description: "",
-        items: "Urso Eu te amo • Bombons Ferrero Rocher • Polaraid de mesa (versão Instagram ou versão frase) • Cartão de felicitações • Embalagem em kraft",
+        items: "Urso Eu te amo • Bombons Ferrero Rocher • Polaroid de mesa (versão Instagram ou versão frase) • Cartão de felicitações • Embalagem em kraft",
         images: {
             1: "img/eternizar/1.jpg",
         },
@@ -27,33 +27,33 @@ export const products = [
             2: "img/sonho/2.jpg",
         },
     },
-    {
-        title: "Amo bombons",
-        price: "149,90",
-        description:
-            "Versão especial do Dia dos Namorados.\nÉ possível escolher entre a opção com mini urso ou quadrinho de foto.",
-        items: "Caixa em mdf 30x20 • Biscoitos amanteigados caseiros de Coração e chocolate • Torradinhas temperadas  • Bombons • Brownie recheado • Suco de Uva e laranja • Flor  • Croissants recheados  • Urso mini ou quadrinho de foto • Cartão de felicitações",
-        images: {
-            1: "img/bombons/1.jpg",
-            2: "img/bombons/2.jpg",
-        },
-    },
-    {
-        title: "Simples amor",
-        price: "179,90",
-        description: "",
-        items: "Caixa MDF reutilizável 30x20 • Café-Drip Coffee • Chocolate • Cappuccino em pó • Queijo processado Polenguinho • Brownie recheado • Nutella • Suco integral de uva ou laranja • Uvas e Morangos • Pão mini baguete com parmesão • Biscoito folhado Palmier • Biscoitos amanteigados caseiros • Mini folhados recheados",
-        images: {
-            1: "img/simples/1.jpg",
-        },
-    },
-    {
-        title: "Amo Estar com Vc",
-        price: "179,90",
-        description: "",
-        items: "Cesta MDF reutilizável 30x20 • Cappuccino Pronto • Biscoitos amanteigados caseiros • Bolo de cenoura com ganache • Mel • Queijo processado Polenguinho • Bombons • Frutas da estação no coco • Granola • Torrada tradicional • 2 Iogurte de frutas • Croissants recheados • Vaso de Flor",
-        images: {
-            1: "img/estar/1.jpg",
-        },
-    },
+    // {
+    //     title: "Amo bombons",
+    //     price: "Esgotado",
+    //     description:
+    //         "Versão especial do Dia dos Namorados.\nÉ possível escolher entre a opção com mini urso ou quadrinho de foto.",
+    //     items: "Caixa em mdf 30x20 • Biscoitos amanteigados caseiros de Coração e chocolate • Torradinhas temperadas  • Bombons • Brownie recheado • Suco de Uva e laranja • Flor  • Croissants recheados  • Urso mini ou quadrinho de foto • Cartão de felicitações",
+    //     images: {
+    //         1: "img/bombons/1.jpg",
+    //         2: "img/bombons/2.jpg",
+    //     },
+    // },
+    // {
+    //     title: "Simples amor",
+    //     price: "Esgotado",
+    //     description: "",
+    //     items: "Caixa MDF reutilizável 30x20 • Café-Drip Coffee • Chocolate • Cappuccino em pó • Queijo processado Polenguinho • Brownie recheado • Nutella • Suco integral de uva ou laranja • Uvas e Morangos • Pão mini baguete com parmesão • Biscoito folhado Palmier • Biscoitos amanteigados caseiros • Mini folhados recheados",
+    //     images: {
+    //         1: "img/simples/1.jpg",
+    //     },
+    // },
+    // {
+    //     title: "Amo Estar com Vc",
+    //     price: "Esgotado",
+    //     description: "",
+    //     items: "Cesta MDF reutilizável 30x20 • Cappuccino Pronto • Biscoitos amanteigados caseiros • Bolo de cenoura com ganache • Mel • Queijo processado Polenguinho • Bombons • Frutas da estação no coco • Granola • Torrada tradicional • 2 Iogurte de frutas • Croissants recheados • Vaso de Flor",
+    //     images: {
+    //         1: "img/estar/1.jpg",
+    //     },
+    // },
 ];
